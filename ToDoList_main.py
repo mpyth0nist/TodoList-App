@@ -40,7 +40,28 @@ def remove_indexing(tasks):
 
 
 
-    
+lists = {}
+print("Welcome to Tasky! A simple Minimalistic Todo-List App. \n This mini-program created a todolist for you and save it as a CSV file that you can use after.")
+print("[A]: Add a Task.  \n [U]: Update a Task.  \n [S]: Show Tasks. \n [Q]: Quit the App.")
+choice = input('You choose to .. : ')
+
+td = TodoList()
+
+
+while choice != 'Q':
+    if choice.upper() == 'A':
+        while True:
+
+            task = input("Add Your Task Here: ")
+
+            priority = input("Task priority[1: Crucial, 2: Important, 3: Optional]: ")
+
+            td.set_task(task,int(priority))
+
+            quit = input("Press q to quit or press any other key to add more tasks: ")
+
+            if quit == 'q':
+                break
 
 
 
